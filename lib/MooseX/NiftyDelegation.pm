@@ -7,7 +7,7 @@ use utf8;
 	package MooseX::NiftyDelegation;
 	no thanks;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.001';
+	our $VERSION   = '0.002';
 	use constant {
 		Nifty => 'MooseX::NiftyDelegation::Trait::Attribute',
 	};
@@ -32,7 +32,7 @@ use utf8;
 	package MooseX::NiftyDelegation::Trait::Attribute;
 	no thanks;
 	our $AUTHORITY = 'cpan:TOBYINK';
-	our $VERSION   = '0.001';
+	our $VERSION   = '0.002';
 	use Moose::Role;
 	around _canonicalize_handles => sub {
 		my $orig = shift;
@@ -116,7 +116,7 @@ coderefs like this:
 
 Kinda ugly though. The C<MooseX::NiftyDelegation::Trait::Attribute> trait
 pretties it up a little by automatically wrapping the coderef with a little
-gubbin that sets C<< $_ >> to C<< $self->status >>. Thus:
+gubbin that sets C<< $_ >> to C<< $self->$attribute >>. Thus:
 
    has status => (
       is       => 'rw',

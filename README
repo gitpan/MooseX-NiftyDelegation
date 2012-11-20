@@ -57,7 +57,7 @@ DESCRIPTION
 
     Kinda ugly though. The "MooseX::NiftyDelegation::Trait::Attribute" trait
     pretties it up a little by automatically wrapping the coderef with a
-    little gubbin that sets $_ to "$self->status". Thus:
+    little gubbin that sets $_ to "$self->$attribute". Thus:
 
        has status => (
           is       => 'rw',
