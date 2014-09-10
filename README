@@ -55,9 +55,9 @@ DESCRIPTION
           },
        );
 
-    Kinda ugly though. The "MooseX::NiftyDelegation::Trait::Attribute" trait
+    Kinda ugly though. The `MooseX::NiftyDelegation::Trait::Attribute` trait
     pretties it up a little by automatically wrapping the coderef with a
-    little gubbin that sets $_ to "$self->$attribute". Thus:
+    little gubbin that sets $_ to `$self->$attribute`. Thus:
 
        has status => (
           is       => 'rw',
@@ -68,28 +68,28 @@ DESCRIPTION
           },
        );
 
-    A little prettier. The rest of "MooseX::NiftyDelegation" gives you some
+    A little prettier. The rest of `MooseX::NiftyDelegation` gives you some
     handy functions to make these coderefs a cuter still...
 
-    "Nifty"
+    `Nifty`
         This is a constant which returns the string
-        'MooseX::NiftyDelegation::Trait::Attribute' so you don't have to
-        type that out every time. It is exported by default.
+        'MooseX::NiftyDelegation::Trait::Attribute' so you don't have to type
+        that out every time. It is exported by default.
 
-    "value_is $number"
+    `value_is $number`
         Returns a coderef that evaluates $_ for numeric equality with the
         given number. This function is not exported by default.
 
-    "value_is $string"
-        Returns a coderef that evaluates $_ for string equality with the
-        given string. This function is not exported by default.
+    `value_is $string`
+        Returns a coderef that evaluates $_ for string equality with the given
+        string. This function is not exported by default.
 
-    "value_like $regexp"
+    `value_like $regexp`
         Returns a coderef that evaluates $_ for matching the given regular
         expression. This function is not exported by default.
 
-    Now, why would you want to stuff these "delegted" methods into
-    attributes? Why not just write them as regular methods?
+    Now, why would you want to stuff these "delegted" methods into attributes?
+    Why not just write them as regular methods?
 
        sub is_in_progress {
           my $self = shift;
@@ -97,8 +97,8 @@ DESCRIPTION
        }
 
     A good question. Writing methods which are closely associated with a
-    single attribute as delegated methods just seems to me to be a nice way
-    of grouping related methods. You can even use it for builders:
+    single attribute as delegated methods just seems to me to be a nice way of
+    grouping related methods. You can even use it for builders:
 
        has user_agent => (
           is         => 'ro',
@@ -123,17 +123,17 @@ EXPORT
     See Sub::Exporter for further details.
 
 CAVEATS
-    *   Using a coderef in the delegation hashref is not documented, it's
-        not tested for, and Jesse Luehrs says he doesn't like it. So the
-        feature could get removed at any point.
+    *   Using a coderef in the delegation hashref is not documented, it's not
+        tested for, and Jesse Luehrs says he doesn't like it. So the feature
+        could get removed at any point.
 
         In that case, I'll need to update this module with a bunch of extra
         metahackery. I'm 95% sure it would still be doable - just a lot more
         code.
 
-    *   This module doesn't work in conjunction with attribute native
-        traits. This is native traits insists that the delegated method is
-        either a string or arrayref.
+    *   This module doesn't work in conjunction with attribute native traits.
+        This is native traits insists that the delegated method is either a
+        string or arrayref.
 
         Patches to get this working with native traits are welcome.
 
@@ -150,8 +150,8 @@ AUTHOR
 COPYRIGHT AND LICENCE
     This software is copyright (c) 2012 by Toby Inkster.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+    This is free software; you can redistribute it and/or modify it under the
+    same terms as the Perl 5 programming language system itself.
 
 DISCLAIMER OF WARRANTIES
     THIS PACKAGE IS PROVIDED "AS IS" AND WITHOUT ANY EXPRESS OR IMPLIED

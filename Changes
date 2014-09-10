@@ -4,14 +4,20 @@ MooseX-NiftyDelegation
 Created:      2012-11-19
 Home page:    <https://metacpan.org/release/MooseX-NiftyDelegation>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=MooseX-NiftyDelegation>
-Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
+Maintainer:   Toby Inkster (TOBYINK) <tobyink@cpan.org>
 
-0.002  2012-11-20
+0.003	2014-09-10
 
- - (Documentation) Clarify that the status attribute isn't special; just an
-   example; works with any attribute.
- - (Packaging) List dependencies.
+ [ Packaging ]
+ - Switch to Dist::Inkt.
 
-0.001  2012-11-19  # Initial release
+0.002	2012-11-20
 
+ [ Documentation ]
+ - Clarify that the status attribute isn't special; just an example; works
+   with any attribute.
 
+ [ Packaging ]
+ - List dependencies.
+
+0.001	2012-11-19	Initial release
